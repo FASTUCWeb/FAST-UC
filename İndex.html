@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAST UC</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url('background.png');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:#fff;
+}
+
+header{
+background:rgba(0,0,0,.85);
+padding:20px;
+text-align:center;
+border-bottom:2px solid #ff9900;
+}
+
+.logo{
+font-size:42px;
+font-weight:bold;
+color:#ff9900;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#ff9900;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:24px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.order-box,.note{
+background:rgba(17,17,17,.9);
+border:1px solid #ff9900;
+border-radius:15px;
+padding:20px;
+margin-bottom:25px;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+margin:30px 0;
+color:#ff9900;
+}
+
+input,select{
+width:100%;
+padding:15px;
+margin-top:10px;
+margin-bottom:20px;
+background:#000;
+border:1px solid #444;
+border-radius:10px;
+color:white;
+font-size:18px;
+}
+
+.btn{
+width:100%;
+padding:18px;
+background:#25D366;
+color:white;
+border:none;
+font-size:22px;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+}
+
+.packages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+}
+
+.card{
+background:#111;
+border:2px solid #ff9900;
+border-radius:15px;
+padding:20px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card h3{
+font-size:30px;
+color:#ff9900;
+}
+
+.price{
+font-size:24px;
+margin-top:10px;
+}
+
+footer{
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:42px;
+}
+.hero p{
+font-size:20px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">⚡ FAST UC</div>
+</header>
+
+<section class="hero">
+<h1>FAST UC</h1>
+<p>شحن شدات ببجي بسرعة وأمان</p>
+</section>
+
+<div class="container">
+
+<div class="order-box">
+<h2>اطلب شحنك الآن</h2>
+
+<input type="text" id="playerid" placeholder="اكتب ID اللاعب">
+
+<select id="package">
+<option value="">اختر الباقة</option>
+<option>60 UC - 60 جنيه</option>
+<option>325 UC - 275 جنيه</option>
+<option>660 UC - 560 جنيه</option>
+<option>1800 UC - 1500 جنيه</option>
+<option>3850 UC - 2850 جنيه</option>
+<option>8100 UC - 6000 جنيه</option>
+<option>16200 UC - 12000 جنيه</option>
+<option>24300 UC - 17000 جنيه</option>
+<option>32400 UC - 22000 جنيه</option>
+<option>40500 UC - 29500 جنيه</option>
+</select>
+
+<button class="btn" onclick="sendOrder()">
+إرسال الطلب عبر واتساب
+</button>
+</div>
+
+<h2 class="section-title">أسعار الباقات</h2>
+
+<div class="packages">
+
+<div class="card">
+<h3>60 UC</h3>
+<div class="price">60 جنيه</div>
+</div>
+
+<div class="card">
+<h3>325 UC</h3>
+<div class="price">275 جنيه</div>
+</div>
+
+<div class="card">
+<h3>660 UC</h3>
+<div class="price">560 جنيه</div>
+</div>
+
+<div class="card">
+<h3>1800 UC</h3>
+<div class="price">1500 جنيه</div>
+</div>
+
+<div class="card">
+<h3>3850 UC</h3>
+<div class="price">2850 جنيه</div>
+</div>
+
+<div class="card">
+<h3>8100 UC</h3>
+<div class="price">6000 جنيه</div>
+</div>
+
+<div class="card">
+<h3>16200 UC</h3>
+<div class="price">12000 جنيه</div>
+</div>
+
+<div class="card">
+<h3>24300 UC</h3>
+<div class="price">17000 جنيه</div>
+</div>
+
+<div class="card">
+<h3>32400 UC</h3>
+<div class="price">22000 جنيه</div>
+</div>
+
+<div class="card">
+<h3>40500 UC</h3>
+<div class="price">29500 جنيه</div>
+</div>
+
+</div>
+
+<div class="note">
+<h2>كيف يتم الشحن؟</h2>
+<br>
+<p>
+1- أدخل ID اللاعب<br><br>
+2- اختر الباقة المناسبة<br><br>
+3- اضغط إرسال الطلب عبر واتساب<br><br>
+4- سيتم التواصل معك لإتمام عملية الشحن
+</p>
+</div>
+
+</div>
+
+<footer>
+FAST UC © 2025
+</footer>
+
+<script>
+function sendOrder(){
+
+let id=document.getElementById("playerid").value;
+let pack=document.getElementById("package").value;
+
+if(id=="" || pack==""){
+alert("يرجى إدخال ID اللاعب واختيار الباقة");
+return;
+}
+
+let msg=
+"طلب شحن PUBG UC%0A"+
+"ID اللاعب: "+id+"%0A"+
+"الباقة: "+pack;
+
+window.open(
+"https://wa.me/201012024274?text="+msg,
+"_blank"
+);
+
+}
+</script>
+
+</body>
+</html>
